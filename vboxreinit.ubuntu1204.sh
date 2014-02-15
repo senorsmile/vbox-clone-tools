@@ -4,7 +4,7 @@ echo "Enter hostname:"
 read newhostname
 
 ## remove udev
-rm /etc/udev/rules.d/*net*
+sudo rm /etc/udev/rules.d/*net*
 
 ## set hostname
-echo "$newhostname" > /etc/hostname
+echo "$newhostname" | sudo tee -a /etc/hostname
